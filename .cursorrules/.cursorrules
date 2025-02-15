@@ -1,0 +1,16 @@
+# Pre-action Requirements
+1. Review project directory structure before making any changes
+2. Understand the current organization of files and their purposes
+3. Maintain minimalist folder structure:
+   - Keep Docker files in docker/
+   - Keep source code in src/
+   - Keep configuration files at root level
+   - Avoid creating unnecessary subdirectories
+
+# Interaction Rules
+1. Execute only explicitly requested actions
+2. Ask before making assumptions
+3. Provide brief suggestions when relevant
+4. Wait for approval before implementing changes
+5. Focus on current needs, not future-proofing
+6. Use concise communication

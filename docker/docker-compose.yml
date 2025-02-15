@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: development
+    volumes:
+      - ..:/app
+      - ../certs:/app/certs
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_ENV=development
+      - DJANGO_SECRET_KEY=django-insecure-development-key-123
+      - DJANGO_DEBUG=True
+      - POSTGRES_DB=django_dev
+      - POSTGRES_USER=django_user
+      - POSTGRES_PASSWORD=django_password
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - BROWSERBASE_API_KEY=bb_live_VdQfa1EIni_4QSX-pFQEd6Ttr1A
+      - BROWSERBASE_PROJECT_ID=16e1ba76-0009-47a3-8c6e-a14cf0fcc1f2
+      - FIREBASE_API_KEY=AIzaSyA8n5uzisYPHdcnW6kJFM_8dl-GQiXbloM
+    depends_on:
+      - db
+    command: python src/manage.py runserver 0.0.0.0:8000
+
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=django_dev
+      - POSTGRES_USER=django_user
+      - POSTGRES_PASSWORD=django_password
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres_data: 

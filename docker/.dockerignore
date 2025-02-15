@@ -1,0 +1,45 @@
+# Version control
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Django
+*.log
+db.sqlite3
+media/
+static/
+
+# Development
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.docker/
+
+# Documentation
+docs/
+*.md
+
+# Tests
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Local development
+node_modules/
+*.DS_Store 
