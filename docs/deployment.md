@@ -119,8 +119,8 @@ This document outlines the deployment strategy for the RoundReserve backend serv
 - **Required Secrets**
   ```bash
   # GitHub Repository Secrets
-  AWS_ACCESS_KEY_ID=AKIAWFOQ5HR2D22F2YBX
-  AWS_SECRET_ACCESS_KEY=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
+  AWS_ACCESS_KEY_ID=<aws-access-key-id>
+  AWS_SECRET_ACCESS_KEY=<aws-secret-access-key>
   EC2_SSH_KEY=<contents-of-roundreserve-github-actions-key.pem>
   ```
 
@@ -351,4 +351,4 @@ docker logs docker-web-1
   - ✅ Set up target group with health checks
   - ✅ Added HTTPS listener
   - ✅ Updated DNS records
-  - ⏳ Waiting for DNS propagation 
+  - ⏳ Waiting for DNS propagation

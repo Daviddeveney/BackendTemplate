@@ -5,11 +5,11 @@
 ### AWS CLI Credentials
 ```bash
 # AWS Access Key ID
-AKIAWFOQ5HR2D22F2YBX
+<aws-access-key-id>
 
 # Configure AWS CLI
-aws configure set aws_access_key_id AKIAWFOQ5HR2D22F2YBX
-aws configure set aws_secret_access_key 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
+aws configure set aws_access_key_id <aws-access-key-id>
+aws configure set aws_secret_access_key <aws-secret-access-key>
 aws configure set region us-east-2
 aws configure set output json
 ```
@@ -148,4 +148,4 @@ For Redis issues:
 1. Check Redis service status: `sudo systemctl status redis`
 2. Verify Redis is listening: `netstat -an | grep 6379`
 3. Test Redis connection: `redis-cli ping`
-4. Check Redis logs: `sudo journalctl -u redis` 
+4. Check Redis logs: `sudo journalctl -u redis`
